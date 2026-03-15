@@ -1,0 +1,15 @@
+{application, linuxfr_atom_filter, [
+    {description, "atom_filter example for linuxfr.org"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {linuxfr_atom_filter_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        atom_filter
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, [{"GitHub", "https://github.com/EmergenceSystem/linuxfr_atom_filter"}]}
+]}.

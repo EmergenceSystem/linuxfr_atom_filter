@@ -1,0 +1,11 @@
+{
+    "atom_feeds": [
+        "https://linuxfr.org/news.atom",
+        "https://linuxfr.org/journaux.atom",
+        "https://linuxfr.org/polls.atom",
+        "https://linuxfr.org/tags/atom/public.atom",
+        "https://linuxfr.org/tags/erlang/public.atom",
+        "https://linuxfr.org/tags/linux/public.atom",
+        "https://linuxfr.org/tags/securite/public.atom"
+    ]
+}
