@@ -20,10 +20,15 @@
 start(_StartType, _StartArgs) ->
     copy_config(),
     application:ensure_all_started(atom_filter),
+    em_filter:start_agent(linuxfr_atom_filter, atom_filter_app, #{
+        capabilities => atom_filter_app:base_capabilities()
+                        ++ [<<"linuxfr">>, <<"linux">>, <<"opensource">>,
+                            <<"french">>]
+    }),
     {ok, self()}.
 
 stop(_State) ->
-    ok.
+    em_filter:stop_agent(linuxfr_atom_filter).
 
 %%====================================================================
 %% Internal
