@@ -1,15 +1,23 @@
 {application, linuxfr_atom_filter, [
     {description, "atom_filter example for linuxfr.org"},
-    {vsn, "0.1.0"},
-    {registered, []},
+    {vsn, "0.2.0"},
+    {registered, [linuxfr_atom_filter_sup, linuxfr_atom_filter_server]},
     {mod, {linuxfr_atom_filter_app, []}},
     {applications, [
+        cowboy,
         kernel,
         stdlib,
         atom_filter
     ]},
-    {env, []},
-    {modules, []},
+    {env, [
+        {pop_port,   0},
+        {query_port, 0},
+        {pop_seeds,  []}
+    ]},
+    {modules, [
+        linuxfr_atom_filter_sup,
+        linuxfr_atom_filter_server
+    ]},
     {licenses, ["Apache-2.0"]},
     {links, [{"GitHub", "https://github.com/EmergenceSystem/linuxfr_atom_filter"}]}
 ]}.
